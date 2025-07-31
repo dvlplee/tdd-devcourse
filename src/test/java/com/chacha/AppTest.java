@@ -19,8 +19,18 @@ public class AppTest {
     @DisplayName("10 + 20 == 30") // 실행 결과에 표시될 이름
     void t2() {
         App app = new App();
+        int rs = app.plus(0, 5);
+
+        assertEquals(30, rs); // 두 값이 같은 지 비교(기대값, 실제값)
+    }
+
+    @Test // 테스트 메서드
+    @DisplayName("0 + 5 == 30") // 실행 결과에 표시될 이름
+    void t3() {
+        App app = new App();
         int rs = app.plus(10, 20);
 
         assertEquals(30, rs); // 두 값이 같은 지 비교(기대값, 실제값)
     }
+
 }
