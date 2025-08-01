@@ -43,4 +43,24 @@ public class RqTest {
 
         assertEquals("남원", name);
     }
+
+    @Test
+    @DisplayName("등록?이름=홍길동&고향=남원, rq.getParam()")
+    void t5() {
+        Rq rq = new Rq("등록?이름=홍길동&고향=남원");
+
+        String name = rq.getParam("이름", "");
+
+        assertEquals("홍길동", name);
+    }
+
+    @Test
+    @DisplayName("등록?이름=홍길동&고향=남원, rq.getParam()")
+    void t6() {
+        Rq rq = new Rq("등록?이름=홍길동&고향=남원");
+
+        String name = rq.getParam("고향", "");
+
+        assertEquals("남원", name);
+    }
 }
